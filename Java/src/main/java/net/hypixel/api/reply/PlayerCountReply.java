@@ -13,6 +13,9 @@ public class PlayerCountReply extends AbstractReply {
 
     @Override
     public String toString() {
+        for (Player p : Bukkit.getOnlinePlayers()) {
+            p.sendMessage("Online: " + playerCount);
+        }
         return "PlayerCountReply{" +
                 "playerCount=" + playerCount +
                 "} " + super.toString();
